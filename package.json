@@ -1,11 +1,11 @@
 {
   "name": "react-ecs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "keywords": [],
   "main": "dist/react-ecs.umd.js",
   "module": "dist/react-ecs.es5.js",
-  "typings": "dist/types/react-ecs.d.ts",
+  "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],

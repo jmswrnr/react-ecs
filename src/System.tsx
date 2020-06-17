@@ -26,3 +26,7 @@ const System: React.FunctionComponent<Props> = ({
 }
 
 export default System
+
+export const asSystem = (ctor: SystemConstructor<any>) => {
+  return (props: Props) => <System ctor={ctor} {...props} />
+}

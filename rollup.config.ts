@@ -15,19 +15,18 @@ export default {
     {
       file: pkg.main,
       name: camelCase(libraryName),
+      noConflict: true,
       format: 'umd',
       sourcemap: true,
-      globals: { react: 'React' },
     },
     {
       file: pkg.module,
       format: 'es',
       sourcemap: true,
-      globals: { react: 'React' },
     },
   ],
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
-  external: ['react'],
+  external: ['react', 'ecsy'],
   watch: {
     include: 'src/**',
   },
