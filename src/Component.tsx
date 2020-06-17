@@ -27,3 +27,7 @@ const Component: React.FunctionComponent<Props> = ({
 }
 
 export default Component
+
+export const asComponent = (ctor: ComponentConstructor<any>) => {
+  return (props: Props) => <Component ctor={ctor} {...props} />
+}

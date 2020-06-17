@@ -3,10 +3,16 @@ import { World } from 'ecsy'
 
 export const WorldContext = createContext<World>(null)
 
-type Props = {}
+export interface WorldConstructor<T extends World> {
+  new (...args: any): T;
+}
 
-const ReactWorld: React.FunctionComponent<Props> = ({ children }) => {
-  const [world] = useState(() => new World())
+type Props = {
+  ctor: WorldConstructor<any>
+}
+
+const ReactWorld: React.FunctionComponent<Props> = ({ children, ctor }) => {
+  const [world] = useState(() => new ctor())
 
   useEffect(() => {
     // Init World
